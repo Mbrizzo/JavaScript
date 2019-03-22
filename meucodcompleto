@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SISTEMAS DE INFORMAÇÃO - PROJETO WEB I</title>
+<link rel="stylesheet" href="css/estilos.css">	
+<script src="script/scripts.js"></script>	
+</head>
+	
+<body>	
+<header class="logo">
+	<img src="img/logo.png" alt="" width="1232" height="165">
+    <hr>
+</header>
+	<h1>Projeto Web I</h1>
+	<h3>Professor: Élisson Michael Fernandes M. Araújo</h3>
+	<hr>
+	<h5 id="saudacao"> </h5>
+	<hr>
+	 
+<nav class="menu">
+	<ul>
+		<li><a href="html.html">HTML</a></li>
+		<li><a href="css.html">CSS</a></li>
+		<li><a href="javascript.html">JAVASCRIPT</a></li>
+	</ul>
+</nav>
+	
+<footer>
+  <p>Direitos Reservados (c) 2019</p>
+</footer>
+	
+</body>
+</html>
+
+==========================JS================================
+
+"use strict";
+let nome = prompt("Digite seu nome: ");
+let sobrenome = prompt("Agora digite seu sobrnome: ");
+saudacao.innerHTML = `Seja bem vindo, ${nome} ${sobrenome}`;
+
+==========================CSS================================
+@charset "utf-8";
+/* CSS Document */
+
+.logo img{
+	display: block;
+	
+	
+}
+
+.menu {
+	background: #333;
+	overflow: hidden;
+	
+}
+
+.menu ul li{
+	list-style: none;
+	display: inline;
+}
+
+.menu ul li a{
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.menu ul li a:hover{
+	-webkit-column-rule: #169898;
+	-moz-column-rule: #169898;
+	-o-column-rule: #169898;
+	column-rule: #169898;
+	color:aquamarine;
+}
+
+#saudacao {
+	color: olivedrab;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}

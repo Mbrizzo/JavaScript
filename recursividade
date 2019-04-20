@@ -1,0 +1,31 @@
+=======HTML============
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sem título</title>
+</head>
+
+<body>
+	<script src="javascript.js"></script>
+</body>
+</html>
+
+=============JS================
+'user strict';
+function contarElefante(min,max){
+	document.write(min + "elefate incomoda muito a gente <br>")
+	if (min < max){
+		contarElefante(++min, max)
+			if ((min % 2) == 0){
+			document.write(min + 'elefantes ' + 'incomodam '.repeat(min)  + ' muito mais <br>')
+			} else if ((min % 2) != 0){
+			document.write(min + 'elefantes incomodam muito a gente <br>')
+		}
+		
+	}
+}
+contarElefante(1,10);
+
+
+

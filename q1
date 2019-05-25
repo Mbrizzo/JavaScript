@@ -1,0 +1,53 @@
+`======================================HTML========================================
+ <section>            
+            <h1 class="text-center">APS III - Questão 1</h1>
+                <p>Dado um número inteiro positivo <b>N</b>, imprimir os <b>N</b> primeiros naturais pares.
+                    : Para N = 4 a saída deverá ser 2, 4, 6, 8. Soma: 20.</p>
+                    <hr>
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-warning" id="addon-wrapping"><b>N</b></span>
+                    </div>
+                  <input type="text" autofocus="autofocus" required="required" class="form-control bg-dark text-white" placeholder="Digite um número e tecle ENTER" id="inputNumeroDigitado" onChange="questaoI()">               
+                </div>		
+            <div>				
+                <table class="table table-striped table-dark">
+				  <thead>
+					<tr>
+					  <th scope="row" id="lista"></th>
+					</tr>
+				  </thead>
+				  <tbody>
+				      <p id="somaTudo"></p> 
+				  </tbody>				  
+				</table>
+            </div>
+        </section>
+ `
+ ==============================================JS=========================================
+ `'use strict'; 
+let vetor = [];
+let soma;
+let somaTudo = 0;
+function questaoI(){  
+  let numeroDigitado = Number(inputNumeroDigitado.value);  
+  let contador = 0;
+  let adicionaNumeroVetor;
+  let listas;
+  while (contador < numeroDigitado){
+    		adicionaNumeroVetor = (2 * contador) + 2; 
+	  		contador++;
+			vetor.push(adicionaNumeroVetor);
+	   }	  
+  for(let i = 0; i < vetor.length; i++) {	     
+  		lista.innerHTML += (`${vetor[i]}<br>`);	  	
+  }	 
+	soma = vetor.reduce(function(a, b) {
+		return a + b;	
+	}, 0);
+	somaTudo = (soma);
+  
+}
+console.log(vetor);
+console.log(soma);
+`
